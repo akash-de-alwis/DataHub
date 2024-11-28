@@ -1,0 +1,639 @@
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+
+.main-container {
+  flex: 1;
+  padding: 2rem;
+  padding-bottom: 250px;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Flight Tracker Styles */
+.flight-tracker-container {
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.loading-state, .error-state {
+  text-align: center;
+  padding: 3rem;
+  color: white;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-icon {
+  font-size: 2rem;
+  color: #ef4444;
+  margin-bottom: 1rem;
+}
+
+.flight-tracker-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.flight-tracker-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header-icon {
+  font-size: 2rem;
+  color: #4CAF50;
+}
+
+.flight-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+
+.stat-icon {
+  font-size: 1.5rem;
+  color: #4CAF50;
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.flights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.flight-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.flight-card:hover {
+  transform: translateY(-4px);
+}
+
+.flight-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.flight-icon {
+  font-size: 1.5rem;
+  color: #4CAF50;
+}
+
+.flight-card-header h3 {
+  margin: 0;
+  flex: 1;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-active {
+  background: #4CAF50;
+  color: white;
+}
+
+.status-scheduled {
+  background: #2196F3;
+  color: white;
+}
+
+.status-delayed {
+  background: #FFC107;
+  color: black;
+}
+
+.status-cancelled {
+  background: #F44336;
+  color: white;
+}
+
+.flight-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.info-icon {
+  color: #4CAF50;
+}
+
+.route-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+.departure-info, .arrival-info {
+  padding: 0.5rem;
+}
+
+.departure-info h4, .arrival-info h4 {
+  color: #4CAF50;
+  margin: 0 0 0.5rem 0;
+}
+
+.departure-info p, .arrival-info p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+  .flight-tracker-container {
+    padding: 1rem;
+  }
+
+  .flight-tracker-header h1 {
+    font-size: 2rem;
+  }
+
+  .flights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .route-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Search Styles */
+.search-container {
+  margin-bottom: 2rem;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 0.75rem 1.25rem;
+  gap: 1rem;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.search-wrapper.focused {
+  border-color: #4CAF50;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.search-icon {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+}
+
+.search-input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  padding: 0;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.clear-button {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.clear-button:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  color: white;
+}
+
+.no-results-icon {
+  font-size: 2rem;
+  color: #4CAF50;
+  margin-bottom: 1rem;
+}
+
+.no-results p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Currency Converter Styles */
+.currency-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.currency-header {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+  color: white;
+}
+
+.currency-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.converter-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+}
+
+.amount-input {
+  margin-bottom: 2rem;
+}
+
+.amount-input label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.amount-input input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1.1rem;
+}
+
+.currency-selectors {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  align-items: end;
+  margin-bottom: 2rem;
+}
+
+.currency-select label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.currency-select select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+}
+
+.swap-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.swap-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.conversion-result {
+  margin-top: 2rem;
+}
+
+.result-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.conversion-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.arrow-icon {
+  color: #4CAF50;
+}
+
+.exchange-rate {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.conversion-loading {
+  text-align: center;
+  padding: 2rem;
+}
+
+.conversion-error {
+  text-align: center;
+  color: #ef4444;
+  padding: 1rem;
+  background: rgba(239, 68, 68, 0.1);
+  border-radius: 8px;
+}
+
+@media (max-width: 576px) {
+  .currency-selectors {
+    grid-template-columns: 1fr;
+  }
+
+  .swap-button {
+    margin: 1rem auto;
+    transform: rotate(90deg);
+  }
+
+  .swap-button:hover {
+    transform: rotate(90deg) scale(1.1);
+  }
+
+  .conversion-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .arrow-icon {
+    transform: rotate(90deg);
+  }
+}
+
+/* Mirror Container Styles */
+.mirror-container {
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  margin-top: 2rem;
+}
+
+.mirror-effect {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.1) 25%,
+    transparent 30%
+  );
+  animation: mirror-animation 8s linear infinite;
+}
+
+@keyframes mirror-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom Select Styles */
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.select-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+.select-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 0.5rem;
+  background: rgba(30, 41, 59, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.search-box {
+  position: relative;
+  padding: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: white;
+}
+
+.search-box .search-icon {
+  position: absolute;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-box .clear-icon {
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.options-list {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.option {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.option:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.option.selected {
+  background: rgba(79, 70, 229, 0.2);
+  color: #4CAF50;
+}
+
+/* Scrollbar Styles */
+.options-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.options-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.options-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.options-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
