@@ -1,6 +1,6 @@
 # DataHub
 
-DataHub is a web application that provides real-time global insights and comprehensive data analytics. Users can explore weather information and news articles from around the world, making it a powerful tool for staying informed.
+DataHub is a web application that provides real-time global insights and comprehensive data analytics. Users can explore weather information and news articles from around the world, making it a powerful tool for staying informed..
 
 ## Preview
 ![Screenshot 2024-11-29 102959](https://github.com/user-attachments/assets/3ec12c1d-05b8-43df-b3da-68d1117631ec)
