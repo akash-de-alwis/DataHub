@@ -2,10 +2,14 @@
 
 DataHub is a web application that provides real-time global insights and comprehensive data analytics. Users can explore weather information and news articles from around the world, making it a powerful tool for staying informed.
 
+## Preview
+![Screenshot 2024-11-29 102959](https://github.com/user-attachments/assets/3ec12c1d-05b8-43df-b3da-68d1117631ec)
+
 ## Features
 
 - **Weather Explorer**: Get real-time weather data for any location worldwide.
 - **News Explorer**: Stay updated with the latest headlines and articles from various topics.
+- **Currency Convertor**: Convert any currency to any other currency.
 - **Responsive Design**: Optimized for both desktop and mobile devices.
 - **User-Friendly Interface**: Easy navigation and intuitive design.
 
@@ -83,4 +87,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Feel free to customize this README file according to your project's specific details and requirements.
