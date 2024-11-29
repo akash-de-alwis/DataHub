@@ -5,6 +5,9 @@ DataHub is a web application that provides real-time global insights and compreh
 ## Preview
 ![Screenshot 2024-11-29 102959](https://github.com/user-attachments/assets/3ec12c1d-05b8-43df-b3da-68d1117631ec)
 
+## Demo
+<p> <a href="https://www.linkedin.com/posts/akash-de-alwis-976a82284_react-javascript-webdevelopment-activity-7264615782909714432-QPFv?utm_source=combined_share_message&utm_medium=member_desktop_web" target="_blank"> <img src="https://img.shields.io/badge/View%20Demo-Click%20Here-blue?style=for-the-badge&logo=linkedin" alt="Demo Button"> </a> </p>
+
 ## Features
 
 - **Weather Explorer**: Get real-time weather data for any location worldwide.
